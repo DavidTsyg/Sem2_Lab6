@@ -53,8 +53,9 @@ public:
 
     void mul_complex(Complex number)
     {
+        double buf = x;
         x = x*number.give_x() - y*number.give_y();
-        y = x*number.give_y() + y*number.give_x();
+        y = buf*number.give_y() + y*number.give_x();
     }
     void print()
     {
